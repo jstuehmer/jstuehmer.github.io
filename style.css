@@ -7,9 +7,12 @@ body {
 }
 
 header {
-  background-color: #241c24
+  margin: 0px;
+  font-size: 23px;
+  color: #f1c32f;
+  background-color: #241c24;
 }
 
 nav a {
-  margin-left:20px
+  margin-left:20px;
 }
