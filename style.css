@@ -1,15 +1,49 @@
-header {
-  margin: 0px;
-  font-size: 23px;
-  color: #f1c32f;
-  background-color: #241c24;
-}
 body {
   margin: 0 auto;
   max-width: 700px;
   min-width: 0;
   padding: 0 10px 25px;
   font-family: "Helvetica", "Arial", sans-serif;
+
+  display: grid;
+  row-gap: 5px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 60px auto auto;
+  grid-template-areas: 
+    "header nav"
+    "about about"
+    "links certs"
+}
+header {
+  margin: 0px;
+  font-size: 23px;
+  color: #f1c32f;
+  background-color: #241c24;
+
+  grid-area: header;
+  justify-self: left;
+  align-self: end;
+}
+nav {
+  font-size: 18px;
+  letter-spacing: 1px;
+
+  grid-area: nav;
+  justify-self: right;
+  align-self: end;
+}
+article {
+  font-size: 16px;
+
+  grid-area: about;
+}
+.links {
+  grid-area: links;
+  justify-self: left;
+}
+.certs {
+  grid-area: certs;
+  justify-self: left;
 }
 h1 {
   font-size: 26px;
@@ -18,13 +52,6 @@ h2 {
   margin-top: 1em;
   padding-top: 1em;
   font-size: 23px;
-}
-article {
-  font-size: 16px;
-}
-nav {
-  font-size: 18px;
-  letter-spacing: 1px;
 }
 nav a {
   margin-left:20px;
